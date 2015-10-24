@@ -1,0 +1,18 @@
+<h1>Listing labs</h1>
+ <%= link_to 'New Lab', new_lab_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Logo</th>
+  </tr>
+ 
+  <% @labs.each do |lab| %>
+    <tr>
+      <td><%= lab.name %></td>
+      <td><%= lab.address %></td>
+      <td><%= lab.logo %></td>
+    </tr>
+  <% end %>
+</table>
